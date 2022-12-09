@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "cloud_confidant_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "cloud_confidant_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "cloud_confidant_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
