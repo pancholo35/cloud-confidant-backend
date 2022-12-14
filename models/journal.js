@@ -8,7 +8,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Journal.hasMany(models.Page, { as: 'pages', foreignKey: 'journalId' })
+      Journal.hasMany(models.Page, {
+        as: 'pages',
+        foreignKey: 'journalId',
+        onDelete: 'CASCADE',
+        hooks: true
+      })
       Journal.belongsTo(models.User, { as: 'user', foreignKey: 'userId' })
     }
   }
