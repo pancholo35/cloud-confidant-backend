@@ -70,7 +70,7 @@ const updatePage = async (req, res) => {
   }
 }
 
-const deletePage = async () => {
+const deletePage = async (req, res) => {
   try {
     await Page.destroy({ where: { id: req.params.page_id } })
   } catch (error) {
