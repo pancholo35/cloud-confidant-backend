@@ -73,6 +73,11 @@ const updatePage = async (req, res) => {
 const deletePage = async (req, res) => {
   try {
     await Page.destroy({ where: { id: req.params.page_id } })
+    res.send({
+      msg: 'Page Deleted',
+      payload: req.params.page_id,
+      status: 'Ok'
+    })
   } catch (error) {
     throw error
   }
